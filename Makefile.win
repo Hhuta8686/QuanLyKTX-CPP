@@ -1,0 +1,43 @@
+# Project: Quanlykytucxa
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o Dangky.o HoaDon.o Phong.o SinhVien.o ThongKe.o
+LINKOBJ  = main.o Dangky.o HoaDon.o Phong.o SinhVien.o ThongKe.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = Quanlykytucxa.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\DevCpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Dangky.o: Dangky.cpp
+	$(CPP) -c Dangky.cpp -o Dangky.o $(CXXFLAGS)
+
+HoaDon.o: HoaDon.cpp
+	$(CPP) -c HoaDon.cpp -o HoaDon.o $(CXXFLAGS)
+
+Phong.o: Phong.cpp
+	$(CPP) -c Phong.cpp -o Phong.o $(CXXFLAGS)
+
+SinhVien.o: SinhVien.cpp
+	$(CPP) -c SinhVien.cpp -o SinhVien.o $(CXXFLAGS)
+
+ThongKe.o: ThongKe.cpp
+	$(CPP) -c ThongKe.cpp -o ThongKe.o $(CXXFLAGS)
