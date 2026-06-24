@@ -1,4 +1,4 @@
-# 🏢 HỆ THỐNG QUẢN LÝ KÝ TÚC XÁ - ĐẠI HỌC BÁCH KHOA HÀ NỘI
+# 🏢 HỆ THỐNG QUẢN LÝ KÝ TÚC XÁ 
 
 Hệ thống quản lý thông tin nội trú Ký túc xá được viết bằng ngôn ngữ **C++** theo kiến trúc **Modular**, sử dụng cấu trúc dữ liệu **Danh sách liên kết đơn (Singly Linked List)** để tối ưu hóa bộ nhớ và quản lý dữ liệu động toàn cục.
 
